@@ -1,18 +1,23 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+import { ChartModule } from '@syncfusion/ej2-angular-charts';
+import { DateTimeService, LineSeriesService, TooltipService, LegendService } from '@syncfusion/ej2-angular-charts';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartModule
   ],
-  providers: [],
+  providers: [DateTimeService, LineSeriesService, TooltipService, LegendService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
