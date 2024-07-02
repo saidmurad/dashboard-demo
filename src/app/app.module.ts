@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
-import { ChartModule } from '@syncfusion/ej2-angular-charts';
-import { DateTimeService, LineSeriesService, TooltipService, LegendService } from '@syncfusion/ej2-angular-charts';
 
 @NgModule({
   declarations: [
@@ -16,10 +14,9 @@ import { DateTimeService, LineSeriesService, TooltipService, LegendService } fro
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    ChartModule
+    HttpClientModule
   ],
-  providers: [DateTimeService, LineSeriesService, TooltipService, LegendService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
